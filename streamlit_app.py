@@ -43,7 +43,7 @@ with tabs[0]:
                     time.sleep(0.3)
 
             # Send message to backend
-            res = requests.post("http://127.0.0.1:5000/chat", json={"message": user_input})
+            res = requests.post("https://ai-ml-final-project.onrender.com/chat", json={"message": user_input})
             data = res.json()
             reply = data.get("response", "Sorry, I didn’t understand.")
             emotion = data.get("emotion", "neutral")
@@ -68,7 +68,7 @@ with tabs[0]:
         st.session_state.messages = []
         st.session_state.emotions = []
         try:
-            requests.post("http://127.0.0.1:5000/reset")
+            requests.post("https://ai-ml-final-project.onrender.com/reset")
             st.success("Conversation reset.")
         except Exception as e:
             st.error(f"Backend reset failed: {e}")
