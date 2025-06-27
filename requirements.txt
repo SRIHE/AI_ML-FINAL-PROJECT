@@ -2,6 +2,3 @@ flask
 transformers
 torch
 pandas
-streamlit
-requests
-altair
