@@ -14,7 +14,7 @@ if "emotions" not in st.session_state:
     st.session_state.emotions = []
 
 st.title("💜 Soul Lifter – Mental Health Chatbot")
-tabs = st.tabs(["💬 Chat", "📊 Dashboard", "📁 Logs"])
+tabs = st.tabs(["💬 Chat", "📊 Dashboard", "ℹ️ About"])
 
 # --- TAB 1: Chat ---
 with tabs[0]:
@@ -43,7 +43,7 @@ with tabs[0]:
                     time.sleep(0.3)
 
             # Send message to backend
-            res = requests.post("https://ai-ml-final-project.onrender.com/chat", json={"message": user_input})
+            res = requests.post("https://ai-ml-final-project.onrender.com//chat", json={"message": user_input})
             data = res.json()
             reply = data.get("response", "Sorry, I didn’t understand.")
             emotion = data.get("emotion", "neutral")
@@ -68,7 +68,7 @@ with tabs[0]:
         st.session_state.messages = []
         st.session_state.emotions = []
         try:
-            requests.post("https://ai-ml-final-project.onrender.com/reset")
+            requests.post("https://ai-ml-final-project.onrender.com//reset")
             st.success("Conversation reset.")
         except Exception as e:
             st.error(f"Backend reset failed: {e}")
@@ -95,10 +95,15 @@ with tabs[1]:
         st.info("No data yet. Start chatting!")
 
 # --- TAB 3: Logs ---
-with tabs[2]:
-    st.subheader("💾 Logs")
 
-    if st.button("💾 Save Chat Log"):
-        with open("chat_logs.json", "w") as f:
-            json.dump(st.session_state.messages, f, indent=4)
-        st.success("Chat log saved to chat_logs.json ✅")
+with tabs[2]:
+    st.subheader("About Soul Lifter")
+    st.markdown("""
+        Soul Lifter is a mental health chatbot designed to listen and support your emotional well-being.
+        Powered by AI and emotion detection.
+        
+        🔗 Backend: Render  
+        🌐 Frontend: Streamlit Cloud  
+        💜 Developed by: [Your Name or Team Name]
+    """)
+
