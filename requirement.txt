@@ -1,28 +1,7 @@
-import streamlit as st
-import requests
-
-st.set_page_config(page_title="Mental Health Chatbot", page_icon="💬")
-st.title("🧠 Mental Health Support Bot")
-
-if "chat" not in st.session_state:
-    st.session_state.chat = []
-
-user_input = st.text_input("You:", key="input")
-
-if user_input:
-    st.session_state.chat.append(("You", user_input))
-
-    try:
-        response = requests.post("http://127.0.0.1:5000/chat", json={"message": user_input})
-        bot_reply = response.json().get("response", "Sorry, I couldn't understand.")
-    except requests.exceptions.ConnectionError:
-        bot_reply = "⚠️ Error: Could not connect to the backend server."
-
-    st.session_state.chat.append(("Bot", bot_reply))
-
-for speaker, message in st.session_state.chat:
-    st.markdown(f"**{speaker}:** {message}")
-
-if st.button("🔁 Reset Chat"):
-    st.session_state.chat = []
-    st.success("Chat has been reset.")
+flask
+transformers
+torch
+pandas
+streamlit
+requests
+altair
