@@ -1,0 +1,50 @@
+[
+    {
+        "role": "user",
+        "content": "i feel dead"
+    },
+    {
+        "role": "assistant",
+        "content": "Please don\u2019t isolate yourself. Reach out\u2014you\u2019re not alone.\n\nHelpline: 9152987821  \n\n\ud83e\udde0 *Emotion: `sadness`*"
+    },
+    {
+        "role": "user",
+        "content": "i am worthless"
+    },
+    {
+        "role": "assistant",
+        "content": "You are not worthless. You have unique value and importance.\n\nHelpline: 02225521111 (Vandrevala Foundation Helpline)  \n\n\ud83e\udde0 *Emotion: `sadness`*"
+    },
+    {
+        "role": "user",
+        "content": "i am very sad"
+    },
+    {
+        "role": "assistant",
+        "content": "It\u2019s okay to be sad. Allow yourself to feel and heal.\n\nHelpline: 9152987821  \n\n\ud83e\udde0 *Emotion: `sadness`*"
+    },
+    {
+        "role": "user",
+        "content": "i am ok now"
+    },
+    {
+        "role": "assistant",
+        "content": "Are you ok?  \n\n\ud83e\udde0 *Emotion: `joy`*"
+    },
+    {
+        "role": "user",
+        "content": "yes"
+    },
+    {
+        "role": "assistant",
+        "content": "Are you okay?  \n\n\ud83e\udde0 *Emotion: `joy`*"
+    },
+    {
+        "role": "user",
+        "content": "i love you"
+    },
+    {
+        "role": "assistant",
+        "content": "I love you  \n\n\ud83e\udde0 *Emotion: `love`*"
+    }
+]
